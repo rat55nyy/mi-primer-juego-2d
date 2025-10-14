@@ -34,6 +34,22 @@ position = Vector2(-1, -1)
 
 [node name="Player" parent="." instance=ExtResource("1_elqb8")]
 
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Message" type="Label" parent="HUD"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StartButton" type="Button" parent="HUD"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Timer" type="Timer" parent="HUD"]
+
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
